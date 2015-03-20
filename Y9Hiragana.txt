@@ -1,0 +1,232 @@
+﻿[
+  {
+    "question": "あ",
+    "answer": "A",
+    "correct": false
+  },
+  {
+    "question": "い",
+    "answer": "I",
+    "correct": false
+  },
+  {
+    "question": "う",
+    "answer": "U",
+    "correct": false
+  },
+  {
+    "question": "え",
+    "answer": "E",
+    "correct": false
+  },
+  {
+    "question": "お",
+    "answer": "O",
+    "correct": false
+  },
+  {
+    "question": "か",
+    "answer": "Ka",
+    "correct": false
+  },
+  {
+    "question": "き",
+    "answer": "Ki",
+    "correct": false
+  },
+  {
+    "question": "く",
+    "answer": "Ku",
+    "correct": false
+  },
+  {
+    "question": "け",
+    "answer": "Ke",
+    "correct": false
+  },
+  {
+    "question": "こ",
+    "answer": "Ko",
+    "correct": false
+  },
+  {
+    "question": "さ",
+    "answer": "Sa",
+    "correct": false
+  },
+  {
+    "question": "し",
+    "answer": "Shi",
+    "correct": false
+  },
+  {
+    "question": "す",
+    "answer": "Su",
+    "correct": false
+  },
+  {
+    "question": "せ",
+    "answer": "Se",
+    "correct": false
+  },
+  {
+    "question": "そ",
+    "answer": "So",
+    "correct": false
+  },
+  {
+    "question": "た",
+    "answer": "Ta",
+    "correct": false
+  },
+  {
+    "question": "ち",
+    "answer": "Chi",
+    "correct": false
+  },
+  {
+    "question": "つ",
+    "answer": "Tsu",
+    "correct": false
+  },
+  {
+    "question": "て",
+    "answer": "Te",
+    "correct": false
+  },
+  {
+    "question": "と",
+    "answer": "To",
+    "correct": false
+  },
+  {
+    "question": "な",
+    "answer": "Na",
+    "correct": false
+  },
+  {
+    "question": "に",
+    "answer": "Ni",
+    "correct": false
+  },
+  {
+    "question": "ぬ",
+    "answer": "Nu",
+    "correct": false
+  },
+  {
+    "question": "ね",
+    "answer": "Ne",
+    "correct": false
+  },
+  {
+    "question": "の",
+    "answer": "No",
+    "correct": false
+  },
+  {
+    "question": "は",
+    "answer": "Ha",
+    "correct": false
+  },
+  {
+    "question": "ひ",
+    "answer": "Hi",
+    "correct": false
+  },
+  {
+    "question": "ふ",
+    "answer": "Fu",
+    "correct": false
+  },
+  {
+    "question": "へ",
+    "answer": "He",
+    "correct": false
+  },
+  {
+    "question": "ほ",
+    "answer": "Ho",
+    "correct": false
+  },
+  {
+    "question": "ま",
+    "answer": "Ma",
+    "correct": false
+  },
+  {
+    "question": "み",
+    "answer": "Mi",
+    "correct": false
+  },
+  {
+    "question": "む",
+    "answer": "Mu",
+    "correct": false
+  },
+  {
+    "question": "め",
+    "answer": "Me",
+    "correct": false
+  },
+  {
+    "question": "も",
+    "answer": "Mo",
+    "correct": false
+  },
+  {
+    "question": "や",
+    "answer": "Ya",
+    "correct": false
+  },
+  {
+    "question": "ゆ",
+    "answer": "Yu",
+    "correct": false
+  },
+  {
+    "question": "よ",
+    "answer": "Yo",
+    "correct": false
+  },
+  {
+    "question": "ら",
+    "answer": "Ra",
+    "correct": false
+  },
+  {
+    "question": "り",
+    "answer": "Ri",
+    "correct": false
+  },
+  {
+    "question": "る",
+    "answer": "Ru",
+    "correct": false
+  },
+  {
+    "question": "れ",
+    "answer": "Re",
+    "correct": false
+  },
+  {
+    "question": "ろ",
+    "answer": "Ro",
+    "correct": false
+  },
+  {
+    "question": "わ",
+    "answer": "Wa",
+    "correct": false
+  },
+  {
+    "question": "を",
+    "answer": "Wo",
+    "correct": false
+  },
+  {
+    "question": "ん",
+    "answer": "Nn",
+    "correct": false
+  }
+]

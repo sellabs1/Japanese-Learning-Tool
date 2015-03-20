@@ -1,0 +1,127 @@
+[
+  {
+    "question": "が",
+    "answer": "Ga",
+    "correct": false
+  },
+  {
+    "question": "ぎ",
+    "answer": "Gi",
+    "correct": false
+  },
+  {
+    "question": "ぐ",
+    "answer": "Gu",
+    "correct": false
+  },
+  {
+    "question": "げ",
+    "answer": "Ge",
+    "correct": false
+  },
+  {
+    "question": "ご",
+    "answer": "Go",
+    "correct": false
+  },
+  {
+    "question": "ざ",
+    "answer": "Za",
+    "correct": false
+  },
+  {
+    "question": "じ",
+    "answer": "Ji",
+    "correct": false
+  },
+  {
+    "question": "ず",
+    "answer": "Zu",
+    "correct": false
+  },
+  {
+    "question": "ぜ",
+    "answer": "Ze",
+    "correct": false
+  },
+  {
+    "question": "ぞ",
+    "answer": "Zo",
+    "correct": false
+  },
+  {
+    "question": "だ",
+    "answer": "Da",
+    "correct": false
+  },
+  {
+    "question": "ぢ",
+    "answer": "Ji＊",
+    "correct": false
+  },
+  {
+    "question": "づ",
+    "answer": "Tzu (Dzu)",
+    "correct": false
+  },
+  {
+    "question": "で",
+    "answer": "De",
+    "correct": false
+  },
+  {
+    "question": "ど",
+    "answer": "Do",
+    "correct": false
+  },
+  {
+    "question": "ば",
+    "answer": "Ba",
+    "correct": false
+  },
+  {
+    "question": "び",
+    "answer": "Bi",
+    "correct": false
+  },
+  {
+    "question": "ぶ",
+    "answer": "Bu",
+    "correct": false
+  },
+  {
+    "question": "べ",
+    "answer": "Be",
+    "correct": false
+  },
+  {
+    "question": "ぼ",
+    "answer": "Bo",
+    "correct": false
+  },
+  {
+    "question": "ぱ",
+    "answer": "Pa",
+    "correct": false
+  },
+  {
+    "question": "ぴ",
+    "answer": "Pi",
+    "correct": false
+  },
+  {
+    "question": "ぷ",
+    "answer": "Pu",
+    "correct": false
+  },
+  {
+    "question": "ぺ",
+    "answer": "Pe",
+    "correct": false
+  },
+  {
+    "question": "ぽ",
+    "answer": "Po",
+    "correct": false
+  }
+]
