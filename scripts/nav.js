@@ -1,3 +1,7 @@
+$(window).on('hashchange', function(){
+	$(".mobile-nav").hide();
+});
+
 $(document).ready(function(){
 	$(".level-list button, .mobile-nav li").click(function(){
 		var page = $(this).attr('id');

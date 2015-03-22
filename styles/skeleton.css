@@ -54,9 +54,10 @@ box-sizing: border-box;}
     height: auto;
   }
 }
-@media (max-width:550px){
+@media (max-width:550px), (max-height:480px ){
   .wrapper{
     box-shadow: none;
+    margin-top: 72px;
   }
   .header{
     height: 0px;
@@ -70,7 +71,7 @@ box-sizing: border-box;}
 }
 @media (max-height: 480px){
   .container{
-    margin: 105px auto 30px;
+    margin: 100px auto 40px;
   }
 }
 
@@ -249,7 +250,6 @@ input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover,
 .button:focus,
-button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {

@@ -35,7 +35,7 @@ var game = game || {};
 	var correctAnswers = 0;
 
 	//Returns the text file name pertaining to the level chosen by the user 
-	//NOTE - Year 11 to 13 question/answer files are yet to be created. Year 9/10 are functional
+	//NOTE - Year 12 and 13 question/answer files are yet to be created. Year 9-11 are functional
 	var LevelChoice = function(level){
 		var txtFile;
 
@@ -85,7 +85,7 @@ var game = game || {};
 		var questionNumber;
 		var row;
 		var column, column2;
-		var buttonArray = ButtonOrder(question); 
+		var buttonArray = AnswerOrder(question); 
 
 		//Clear wrapper's child elements before displaying the new question
 		parent.empty();
@@ -122,7 +122,7 @@ var game = game || {};
 	var NewQuestion = function(){
 		questionsCompleted ++;
 
-		if (questionsCompleted < currentGameQuestions.length) {
+		if (questionsCompleted < 5) {
 			setTimeout(function() {
 				//Display next question in question array
 				currentQuestion = currentGameQuestions[questionsCompleted];
@@ -136,38 +136,36 @@ var game = game || {};
 	};
 
 	//Returns a shuffled array of answer buttons to be used in DisplayQuestion method
-	var ButtonOrder = function(q){
+	var AnswerOrder = function(q){
 		var buttonArray = [];
-		var correctAnswer = q["answer"];
+		var correctAnswer = q;
 		var arrLength = currentGameQuestions.length;
 		//Shuffle the answers array
 		currentGameAnswers.shuffle();
 
 		for (var i = 0; i < 3; i++) {
-			var randAnswer = currentGameAnswers[i]["answer"];
+			var randAnswer = currentGameAnswers[i];
 			//If the random answer is the same as the correct answer, choose a new random answer
-			while (randAnswer == correctAnswer) {
-				randAnswer = currentGameAnswers[Math.floor(Math.random() * arrLength)]["answer"];
+			while (randAnswer["id"] == correctAnswer["id"]) {
+				randAnswer = currentGameAnswers[Math.floor(Math.random() * arrLength)];
 			}
 
 			buttonArray.push(
 				$("<button />",{
-					"text" : randAnswer,
+					"text" : randAnswer["answer"],
 					"onclick" : "game.CheckAnswer(this)",
-					"id" : randAnswer
+					"id" : randAnswer["id"]
 				})
 			);	
 		}
-
 		//The correct answer to the current question
 		buttonArray.push(
 			$("<button />",{
-				"text" : correctAnswer,
+				"text" : correctAnswer["answer"],
 				"onclick" : "game.CheckAnswer(this)",
-				"id" : correctAnswer
+				"id" : correctAnswer["id"]
 			})			
 		);
-
 		//Shuffle the array before returning it
 		buttonArray.shuffle();
 		return buttonArray;
@@ -181,18 +179,22 @@ var game = game || {};
 		//Clear child elements
 		wrapper.empty();
 
+		$("<h2 />", {
+			"text" : "Score: " + correctAnswers + "/" + currentGameQuestions.length,
+			"class" : "center"
+		}).appendTo(wrapper);
+
 		$("<th />", {
 			"text" : "Question"
 		}).appendTo($table);
 
 		$("<th />", {
 			"text" : "Answer"
-		}).appendTo($table);		
+		}).appendTo($table);
 
-		$("<h2 />", {
-			"text" : "Score: " + correctAnswers + "/" + currentGameQuestions.length,
-			"class" : "center"
-		}).appendTo(wrapper);
+		$("<th />", {
+			"text" : "You Guessed"
+		}).appendTo($table);		
 
 		//Builds the incorrect/correct table
 		for (question in currentGameQuestions) {
@@ -208,11 +210,10 @@ var game = game || {};
 
 			$row = $("<tr />", {"class" : rowClass});
 
-			$("<td />", {
-				"text" : currentGameQuestions[question]["question"]
-			}).appendTo($row);
-
+			$("<td />", {"text" : currentGameQuestions[question]["question"]}).appendTo($row);
 			$("<td />", {"text" : currentGameQuestions[question]["answer"]}).appendTo($row);
+			$("<td />", {"text" : currentGameQuestions[question]["guess"]}).appendTo($row);
+
 			$row.appendTo($table);
 		};
 
@@ -221,22 +222,24 @@ var game = game || {};
 
 	//Checks the user's chosen answer to the correct answer
 	game.CheckAnswer = function(guess){
-		var correctAnswer = $("#" + currentQuestion["answer"]);
+		var correctAnswer = $("#" + currentQuestion["id"]);
 		var guess = $(guess).attr("id");
+		var guessText = $("#" + guess).text();
 
 		//Disables all buttons to prevent multiple inputs
 		$("button").prop("disabled", true);
 
-		if (guess == currentQuestion["answer"]) {
+		if (guess == currentQuestion["id"]) {
 			currentGameQuestions[questionsCompleted].correct = true;
 			correctAnswer.addClass("correct");
+			currentGameQuestions[questionsCompleted].guess = "Correct";
 			correctAnswers += 1;
 		}
 		else{
 			$("#" + guess).addClass("incorrect");
 			correctAnswer.addClass("correct");
+			currentGameQuestions[questionsCompleted].guess = guessText;
 		}
-
 		NewQuestion();
 	};
 
@@ -244,10 +247,14 @@ var game = game || {};
 		window.location = "index.html";
 	};
 
+	game.showArray = function(){
+		console.log(currentGameQuestions.length);
+	};
+
 	//Starts the game. Populates the question array, and displays the first question.
 	game.StartGame = function(level){
 		window.location.hash = "Game";
-		//Once the Questions Array has been populated..
+		//Once the Questions Array has been populated, start the game
 		PopulateArray(level).done(function(){
 			currentGameQuestions.shuffle();
 			currentGameAnswers = currentGameQuestions.slice();
